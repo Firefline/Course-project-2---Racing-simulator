@@ -3,9 +3,9 @@
 double Boots_AllTerrain::get_time(double distance)
 {
 	this->distance = distance;
-	int relax = 0;
+	double relax = 0;
 
-	for (int a = 1; a < (distance / speed) * 60 / 60; ++a)
+	for (int a = 1; a < (distance / speed) / 60; ++a)
 	{
 		if (a == 1)
 		{
@@ -17,5 +17,5 @@ double Boots_AllTerrain::get_time(double distance)
 		}
 	}
 
-	return ((distance / speed) * 60 + relax) / 60;
+	return ((distance / speed) + relax);
 }

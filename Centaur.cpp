@@ -3,12 +3,12 @@
 double Centaur::get_time(double distance)
 {
 	this->distance = distance;
-	int relax = 0;
+	double relax = 0;
 
-	for (int a = 1; a < (distance / speed) * 60 / 8; ++a)
+	for (int a = 1; a < (distance / speed) / 8; ++a)
 	{
 		relax = relax + 2;
 	}
 
-	return ((distance / speed) * 60 + relax) / 60;
+	return ((distance / speed) + relax);
 }

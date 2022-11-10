@@ -3,13 +3,13 @@
 double Camel_HighSpeed::get_time(double distance)
 {
 	this->distance = distance;
-	int relax = 0;
+	double relax = 0;
 
-	for (int a = 1; a < (distance / speed) * 60 / 10; ++a)
+	for (int a = 1; a < (distance / speed) / 10; ++a)
 	{
 		if (a == 1)
 		{
-			relax = relax + 5;
+			relax = 5;
 		}
 		if (a == 2)
 		{
@@ -21,5 +21,5 @@ double Camel_HighSpeed::get_time(double distance)
 		}
 	}
 
-	return ((distance / speed) * 60 + relax) / 60;
+	return ((distance / speed) + relax);
 }

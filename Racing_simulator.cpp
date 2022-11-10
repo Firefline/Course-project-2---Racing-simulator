@@ -55,8 +55,8 @@ int main(int argc, char** argv)
     int count_transport_ = 0; //счётчик зарегистрированных ТС
     bool game_over = false; //переключатель цикла всей игры
 
-    std::string* arr_names = new std::string[6]; //массив для имён
-    double* arr_results = new double[6]; //массив для результатов
+    std::string* arr_names = new std::string[7]; //массив для имён
+    double* arr_results = new double[7]; //массив для результатов
     //создание массивов
 
     Camel camel(distance_); //1. Верблюд
